@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<mgl-map
+  [style]="'mapbox://styles/mapbox/streets-v9'"
+  [zoom]="[13]"
+  [center]="[0.14, 49.48]"
+  [maxBounds]="maxBounds"
+>
+  <mgl-layer
+  id="borne"
+  type="symbol"
+  [source]="sourceBorne">
+  </mgl-layer>
+</mgl-map>
+
+<router-outlet></router-outlet>
