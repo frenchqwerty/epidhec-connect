@@ -6,11 +6,7 @@
   [center]="[0.14, 49.48]"
   [maxBounds]="maxBounds"
 >
-  <mgl-layer
-  id="borne"
-  type="symbol"
-  [source]="sourceBorne">
-  </mgl-layer>
+  <mgl-layer [source]="positions" id="pts" type="heatmap"></mgl-layer>
 </mgl-map>
 
 <router-outlet></router-outlet>
