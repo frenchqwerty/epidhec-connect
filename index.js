@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZnJlbmNocXdlcnR5IiwiYSI6ImNqeTFjcDU3bzBibmgzbnBjMGs0amNleDMifQ.px-Nyv49yuKgQjkn9DVu_g';
 
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 13,
@@ -11,15 +11,15 @@ var map = new mapboxgl.Map({
     ]
 });
 
-var size = 250;
+const size = 250;
 
-var pulsingDot = {
+const pulsingDot = {
     width: size,
     height: size,
     data: new Uint8Array(size * size * 4),
 
     onAdd: function () {
-        var canvas = document.createElement('canvas');
+        const canvas = document.createElement('canvas');
         canvas.width = this.width;
         canvas.height = this.height;
         this.context = canvas.getContext('2d');
@@ -27,12 +27,12 @@ var pulsingDot = {
 
 // called once before every frame where the icon will be used
     render: function () {
-        var duration = 1000;
-        var t = (performance.now() % duration) / duration;
+        const duration = 1000;
+        const t = (performance.now() % duration) / duration;
 
-        var radius = size / 2 * 0.3;
-        var outerRadius = size / 2 * 0.7 * t + radius;
-        var context = this.context;
+        const radius = size / 2 * 0.3;
+        const outerRadius = size / 2 * 0.7 * t + radius;
+        const context = this.context;
 
 // draw outer circle
         context.clearRect(0, 0, this.width, this.height);
