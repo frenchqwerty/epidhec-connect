@@ -60,7 +60,7 @@ map.on('load', function () {
             "data": route
         });
 
-        map.addSource('point', {
+        map.addSource('point-1', {
             "type": "geojson",
             "data": point
         });
@@ -77,7 +77,7 @@ map.on('load', function () {
 
         map.addLayer({
             "id": "boat",
-            "source": "point",
+            "source": "point-1",
             "type": "symbol",
             "layout": {
                 "icon-image": "boat",
@@ -96,7 +96,7 @@ map.on('load', function () {
                 turf.point(route.features[0].geometry.coordinates[counter >= steps ? counter : counter + 1])
             );
 
-            map.getSource('point').setData(point);
+            map.getSource('point-1').setData(point);
 
             if (counter < steps) {
                 requestAnimationFrame(animate);
