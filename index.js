@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZnJlbmNocXdlcnR5IiwiYSI6ImNqeTFjcDU3bzBibmgzb
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/mapbox/streets-v11',
     zoom: 13,
     center: [0.14, 49.48],
     maxBounds: [
@@ -71,7 +71,7 @@ const pulsingDot = {
     height: size,
     data: new Uint8Array(size * size * 4),
 
-    onAdd: function () {
+    "onAdd": function () {
         const canvas = document.createElement('canvas');
         canvas.width = this.width;
         canvas.height = this.height;
@@ -79,7 +79,7 @@ const pulsingDot = {
     },
 
 // called once before every frame where the icon will be used
-    render: function () {
+    "render": function () {
         const duration = 1000;
         const t = (performance.now() % duration) / duration;
 
@@ -117,6 +117,7 @@ const pulsingDot = {
 map.on('load', function () {
 
     map.addImage('pulsing-dot', pulsingDot, {pixelRatio: 2});
+
 
     map.addLayer({
         "id": "points",
