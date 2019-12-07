@@ -13,6 +13,59 @@ const map = new mapboxgl.Map({
 
 const size = 250;
 
+let bornes = [
+    {
+        coordinates: [0.125546, 49.478897],
+        charge: 0,
+        name: 'borne1'
+    },
+    {
+        coordinates: [0.108243, 49.481757],
+        charge: 0,
+        name: 'borne2'
+    },
+    {
+        coordinates: [0.116746, 49.485081],
+        charge: 0,
+        name: 'borne3'
+    },
+    {
+        coordinates: [0.093954, 49.491879],
+        charge: 0,
+        name: 'borne4'
+    },
+    {
+        coordinates: [0.189413, 49.467266],
+        charge: 0,
+        name: 'borne5'
+    },
+    {
+        coordinates: [0.130463, 49.469573],
+        charge: 0,
+        name: 'borne6'
+    },
+    {
+        coordinates: [0.156911, 49.475245],
+        charge: 0,
+        name: 'borne7'
+    },
+    {
+        coordinates: [0.165641, 49.469740],
+        charge: 0,
+        name: 'borne8'
+    },
+    {
+        coordinates: [0.185676, 49.479746],
+        charge: 0,
+        name: 'borne9'
+    },
+    {
+        coordinates: [0.147681, 49.467099],
+        charge: 0,
+        name: 'borne10'
+    }
+];
+
 const pulsingDot = {
     width: size,
     height: size,
