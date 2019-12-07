@@ -129,6 +129,9 @@ map.on('load', function () {
                 "features": [
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "1",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.125546, 49.478897]
@@ -136,6 +139,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "2",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.108243, 49.481757]
@@ -143,6 +149,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "3",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.116746, 49.485081]
@@ -150,6 +159,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "4",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.093954, 49.491879]
@@ -157,6 +169,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "5",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.189413, 49.467266]
@@ -164,6 +179,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "6",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.130463, 49.469573]
@@ -171,6 +189,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "7",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.156911, 49.475245]
@@ -178,6 +199,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "8",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.165641, 49.469740]
@@ -185,6 +209,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "9",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.185676, 49.479746]
@@ -192,6 +219,9 @@ map.on('load', function () {
                     },
                     {
                         "type": "Feature",
+                        "properties": {
+                            "description": "10",
+                        },
                         "geometry": {
                             "type": "Point",
                             "coordinates": [0.147681, 49.467099]
@@ -202,7 +232,9 @@ map.on('load', function () {
             }
         },
         "layout": {
-            "icon-image": "pulsing-dot"
+            "icon-image": "pulsing-dot",
+            "text-field": ["get", "description"],
+            "text-variable-anchor": ["center"]
         }
     });
 });

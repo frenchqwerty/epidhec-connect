@@ -379,9 +379,28 @@ window.onload = function () {
     window.borne8 = new Chart(ctx8, config8);
     window.borne9 = new Chart(ctx9, config9);
     window.borne10 = new Chart(ctx10, config10);
-    updateConfigAsNewObject(window.borne1);
+    update();
 };
 
-function updateConfigAsNewObject(chart, newData) {
-    chart.update();
+function update() {
+    setTimeout(() => {
+        window.borne4.data.datasets[0].data[0] = 80;
+        window.borne4.update();
+    }, 4000);
+    setTimeout(() => {
+        window.borne4.data.datasets[0].data[0] = 30;
+        window.borne4.update();
+    }, 12000);
+    setTimeout(() => {
+        window.borne2.data.datasets[0].data[0] = 50;
+        window.borne2.update();
+    }, 12000);
+    setTimeout(() => {
+        window.borne2.data.datasets[0].data[0] = 10;
+        window.borne2.update();
+    }, 20000);
+    setTimeout(() => {
+        window.borne1.data.datasets[0].data[0] = 30;
+        window.borne1.update();
+    }, 20000);
 }
